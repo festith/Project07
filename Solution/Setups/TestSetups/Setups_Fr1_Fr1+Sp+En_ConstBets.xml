@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ArrayOfSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Setup>
+    <results>
+      <float>1.20400119</float>
+      <float>1.05232036</float>
+      <float>0.8684857</float>
+      <float>1.11738324</float>
+      <float>1.1517247</float>
+    </results>
+    <betsCount>
+      <int>43</int>
+      <int>50</int>
+      <int>50</int>
+      <int>50</int>
+      <int>37</int>
+    </betsCount>
+    <daysForFormPeriod>90</daysForFormPeriod>
+    <monthForLevelPeriod>48</monthForLevelPeriod>
+    <monthForH2H>24</monthForH2H>
+    <mergeStatistic>false</mergeStatistic>
+    <includeHomeH2H>false</includeHomeH2H>
+    <matchCountForDefaultValue>0</matchCountForDefaultValue>
+    <minValue>0.03</minValue>
+    <maxValue>0.08999999</maxValue>
+    <minKf>1</minKf>
+    <maxKf>5</maxKf>
+    <lampda>0.06</lampda>
+    <kf>1</kf>
+    <finishResult>1.41608191</finishResult>
+  </Setup>
+</ArrayOfSetup>

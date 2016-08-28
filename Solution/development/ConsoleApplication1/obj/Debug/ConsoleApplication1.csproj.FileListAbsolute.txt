@@ -1,0 +1,54 @@
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\a.sushkov\documents\visual studio 2012\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\temp\Analitics\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\temp\Analitics\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\temp\Analitics\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\temp\Analitics\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\temp\Analitics\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\temp\Analitics\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\temp\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\temp\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\temp\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\temp\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\temp\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\temp\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\temp\setializzeNets\bestSol\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\current\Solution\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+G:\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+G:\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+G:\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+G:\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+G:\analityc\developmentNew\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+G:\analityc\developmentNew\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\Analitycs\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\Analitycs\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
