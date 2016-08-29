@@ -70,3 +70,9 @@ D:\Projects\analityc\3NetsFull\ConsoleApplication1\obj\Debug\ConsoleApplication1
 D:\Projects\analityc\3NetsFull\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 D:\Projects\analityc\3NetsFull\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 D:\Projects\analityc\3NetsFull\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\New folder\Project07\Solution\3NetsFull\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

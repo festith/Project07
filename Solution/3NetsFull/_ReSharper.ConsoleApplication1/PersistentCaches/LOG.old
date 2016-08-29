@@ -1,5 +1,5 @@
-2016/08/03-10:24:49.294 4588 Recovering log #38
-2016/08/03-10:24:49.294 4588 Level-0 table #40: started
-2016/08/03-10:24:49.294 4588 Level-0 table #40: 0 bytes OK
-2016/08/03-10:24:49.373 4588 Delete type=0 #38
-2016/08/03-10:24:49.374 4588 Delete type=3 #36
+2016/08/08-15:48:24.621 5cc Recovering log #41
+2016/08/08-15:48:24.713 5cc Level-0 table #43: started
+2016/08/08-15:48:24.972 5cc Level-0 table #43: 330029 bytes OK
+2016/08/08-15:48:25.029 5cc Delete type=0 #41
+2016/08/08-15:48:25.029 5cc Delete type=3 #39

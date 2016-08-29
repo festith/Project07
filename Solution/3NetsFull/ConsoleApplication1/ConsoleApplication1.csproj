@@ -44,6 +44,12 @@
     <Compile Include="AnaliticSystem.cs" />
     <Compile Include="Bet.cs" />
     <Compile Include="BookmakerMatchStatistic.cs" />
+    <Compile Include="BookmakerParsers\BookmakerParser.cs" />
+    <Compile Include="BookmakerParsers\ParimatchHistoryParser.cs" />
+    <Compile Include="BookmakerParsers\ParimatchNewLineParser.cs" />
+    <Compile Include="BookmakerParsers\WilliamHillNewLineParser.cs" />
+    <Compile Include="NameMapper.cs" />
+    <Compile Include="SetupsProvider.cs" />
     <Compile Include="StatisticCalculator.cs" />
     <Compile Include="Statistic\Match.cs" />
     <Compile Include="PNN\NeuralNetwork.cs" />
