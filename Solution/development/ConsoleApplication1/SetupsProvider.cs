@@ -7,9 +7,46 @@ using ConsoleApplication1.SystemSetup;
 
 namespace ConsoleApplication1
 {
-  public static  class SetupsProvider
+    public static class SetupsProvider
     {
-      public static Setup GetSetupTest()
+        //Setups for season 16-17
+
+
+        public static Setup GetSetupNl()
+        {
+            var setup = new Setup();
+            setup.daysForFormPeriod = 30;
+            setup.monthForLevelPeriod = 24;
+            setup.monthForH2H = 48;
+            setup.minValue = 0.04f;
+            setup.maxValue = 0.09f;
+            setup.minKf = 1f;
+            setup.maxKf = 5f;
+            setup.lampda = 0.12f;
+            setup.kf = 1;
+            return setup;
+        }
+
+
+
+        //  end setups for season 16-17
+
+        public static Setup GetSetupIt()
+        {
+            var setup = new Setup();
+            setup.daysForFormPeriod = 30;
+            setup.monthForLevelPeriod = 48;
+            setup.monthForH2H = 36;
+            setup.minValue = 0.05f;
+            setup.maxValue = 0.15f;
+            setup.minKf = 1f;
+            setup.maxKf = 5f;
+            setup.lampda = 0.1f;
+            setup.kf = 1f;
+            return setup;
+        }
+
+        public static Setup GetSetupTest()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
@@ -24,7 +61,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupEn()
+        public static Setup GetSetupEn()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
@@ -39,7 +76,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupSp()
+        public static Setup GetSetupSp()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
@@ -54,22 +91,8 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupIt()
-        {
-            var setup = new Setup();
-            setup.daysForFormPeriod = 30;
-            setup.monthForLevelPeriod = 48;
-            setup.monthForH2H = 36;
-            setup.minValue = 0.03f;
-            setup.maxValue = 0.09f;
-            setup.minKf = 1f;
-            setup.maxKf = 5f;
-            setup.lampda = 0.08f;
-            setup.kf = 1f;
-            return setup;
-        }
-
-      public static Setup GetSetupFr2()
+       
+        public static Setup GetSetupFr2()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
@@ -84,7 +107,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupFr1()
+        public static Setup GetSetupFr1()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 60;
@@ -99,7 +122,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupGer()
+        public static Setup GetSetupGer()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
@@ -114,7 +137,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupIsr()
+        public static Setup GetSetupIsr()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
@@ -129,22 +152,9 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupNl()
-        {
-            var setup = new Setup();
-            setup.daysForFormPeriod = 90;
-            setup.monthForLevelPeriod = 36;
-            setup.monthForH2H = 36;
-            setup.minValue = 0.01f;
-            setup.maxValue = 0.13f;
-            setup.minKf = 1f;
-            setup.maxKf = 5f;
-            setup.lampda = 0.07f;
-            setup.kf = 1;
-            return setup;
-        }
+       
 
-      public static Setup GetSetupPor()
+        public static Setup GetSetupPor()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
@@ -159,7 +169,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupSwitz()
+        public static Setup GetSetupSwitz()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
@@ -174,7 +184,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupTur()
+        public static Setup GetSetupTur()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 75;
@@ -189,7 +199,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupDen()
+        public static Setup GetSetupDen()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 60;
@@ -204,7 +214,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupBel()
+        public static Setup GetSetupBel()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
@@ -219,7 +229,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupAus()
+        public static Setup GetSetupAus()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 45;
@@ -234,7 +244,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupScot()
+        public static Setup GetSetupScot()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
@@ -249,7 +259,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-      public static Setup GetSetupCzech()
+        public static Setup GetSetupCzech()
         {
             var setup = new Setup();
             setup.daysForFormPeriod = 30;
