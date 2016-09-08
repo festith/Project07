@@ -72,23 +72,58 @@ namespace ConsoleApplication1
             setup.kf = 1f;
             return setup;
         }
-              
-        //  end setups for season 16-17
 
         public static Setup GetSetupIt()
         {
             var setup = new Setup();
-            setup.daysForFormPeriod = 30;
-            setup.monthForLevelPeriod = 48;
+            setup.daysForFormPeriod = 60;
+            setup.monthForLevelPeriod = 36;
             setup.monthForH2H = 36;
-            setup.minValue = 0.05f;
+            setup.minValue = 0.02f;
             setup.maxValue = 0.15f;
             setup.minKf = 1f;
+            setup.maxKf = 3f;
+            setup.lampda = 0.09f;
+            setup.kf = 1f;
+            return setup;
+        }
+
+
+
+        public static Setup GetSetupPor()
+        {
+            var setup = new Setup();
+            setup.daysForFormPeriod = 90;
+            setup.monthForLevelPeriod = 48;
+            setup.monthForH2H = 48;
+            setup.minValue = 0.04f;
+            setup.maxValue = 0.09f;
+            setup.minKf = 1f;
             setup.maxKf = 5f;
+            setup.lampda = 0.13f;
+            setup.kf = 1f;
+            return setup;
+        }
+
+
+        public static Setup GetSetupTur()
+        {
+            var setup = new Setup();
+            setup.daysForFormPeriod = 90;
+            setup.monthForLevelPeriod = 24;
+            setup.monthForH2H = 36;
+            setup.minValue = 0.05f;
+            setup.maxValue = 0.13f;
+            setup.minKf = 2f;
+            setup.maxKf = 4f;
             setup.lampda = 0.1f;
             setup.kf = 1f;
             return setup;
         }
+
+        //  end setups for season 16-17
+
+       
 
         public static Setup GetSetupTest()
         {
@@ -154,22 +189,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-       
-
-        public static Setup GetSetupPor()
-        {
-            var setup = new Setup();
-            setup.daysForFormPeriod = 90;
-            setup.monthForLevelPeriod = 48;
-            setup.monthForH2H = 48;
-            setup.minValue = 0.01f;
-            setup.maxValue = 0.05f;
-            setup.minKf = 1f;
-            setup.maxKf = 4f;
-            setup.lampda = 0.1f;
-            setup.kf = 1f;
-            return setup;
-        }
+   
 
         public static Setup GetSetupSwitz()
         {
@@ -182,21 +202,6 @@ namespace ConsoleApplication1
             setup.minKf = 2f;
             setup.maxKf = 6f;
             setup.lampda = 0.11f;
-            setup.kf = 1f;
-            return setup;
-        }
-
-        public static Setup GetSetupTur()
-        {
-            var setup = new Setup();
-            setup.daysForFormPeriod = 75;
-            setup.monthForLevelPeriod = 48;
-            setup.monthForH2H = 48;
-            setup.minValue = 0.01f;
-            setup.maxValue = 0.05f;
-            setup.minKf = 1f;
-            setup.maxKf = 4f;
-            setup.lampda = 0.1f;
             setup.kf = 1f;
             return setup;
         }
