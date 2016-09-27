@@ -305,6 +305,9 @@ namespace ConsoleApplication1
                case "Maritimo":
                    name = "Maritimo Funchal";
                    break;
+               case "Maritimo Madeira":
+                   name = "Maritimo Funchal";
+                   break;
                case "Uniao de Leiria":
                    name = "Uniao Leiria";
                    break;

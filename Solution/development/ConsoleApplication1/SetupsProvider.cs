@@ -63,12 +63,12 @@ namespace ConsoleApplication1
             var setup = new Setup();
             setup.daysForFormPeriod = 90;
             setup.monthForLevelPeriod = 24;
-            setup.monthForH2H = 36;
-            setup.minValue = 0.01f;
-            setup.maxValue = 0.05f;
-            setup.minKf = 2f;
-            setup.maxKf = 4f;
-            setup.lampda = 0.09f;
+            setup.monthForH2H = 24;
+            setup.minValue = 0.08f;
+            setup.maxValue = 0.15f;
+            setup.minKf = 1f;
+            setup.maxKf = 3.25f;
+            setup.lampda = 0.1f;
             setup.kf = 1f;
             return setup;
         }
@@ -109,14 +109,29 @@ namespace ConsoleApplication1
         public static Setup GetSetupTur()
         {
             var setup = new Setup();
-            setup.daysForFormPeriod = 90;
-            setup.monthForLevelPeriod = 24;
+            setup.daysForFormPeriod = 60;
+            setup.monthForLevelPeriod = 36;
             setup.monthForH2H = 36;
             setup.minValue = 0.05f;
-            setup.maxValue = 0.13f;
-            setup.minKf = 2f;
+            setup.maxValue = 0.1f;
+            setup.minKf = 1f;
             setup.maxKf = 4f;
-            setup.lampda = 0.1f;
+            setup.lampda = 0.11f;
+            setup.kf = 1f;
+            return setup;
+        }
+
+        public static Setup GetSetupEn()
+        {
+            var setup = new Setup();
+            setup.daysForFormPeriod = 30;
+            setup.monthForH2H = 24;
+            setup.monthForLevelPeriod = 24;
+            setup.minValue = 0.03f;
+            setup.maxValue = 0.09f;
+            setup.minKf = 3f;
+            setup.maxKf = 5f;
+            setup.lampda = 0.12f;
             setup.kf = 1f;
             return setup;
         }
@@ -140,20 +155,7 @@ namespace ConsoleApplication1
             return setup;
         }
 
-        public static Setup GetSetupEn()
-        {
-            var setup = new Setup();
-            setup.daysForFormPeriod = 30;
-            setup.monthForH2H = 36;
-            setup.monthForLevelPeriod = 48;
-            setup.minValue = 0.03f;
-            setup.maxValue = 0.09f;
-            setup.minKf = 1f;
-            setup.maxKf = 4f;
-            setup.lampda = 0.09f;
-            setup.kf = 1f;
-            return setup;
-        }
+       
 
       
 

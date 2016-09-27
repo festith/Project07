@@ -16,26 +16,18 @@ namespace ConsoleApplication1
         protected NeuralNetwork EnNeuralNetwork;
         protected NeuralNetwork SpNeuralNetwork;
         protected NeuralNetwork ItNeuralNetwork;
+        private NeuralNetwork Fr1NeuralNetwork;
+        private NeuralNetwork GerNeuralNetwork;
+        private NeuralNetwork NlNeuralNetwork;
+        private NeuralNetwork PorNeuralNetwork;
+        private NeuralNetwork TurNeuralNetwork;
 
         protected Statistic statistic;
         protected StatisticCalculator statisticCalculator;
         protected bool systemInitialized;
         protected float fullP;
         protected float maxDelta;
-        private NeuralNetwork Fr2NeuralNetwork;
-        private NeuralNetwork Fr1NeuralNetwork;
-        private NeuralNetwork GerNeuralNetwork;
-        private NeuralNetwork IsrNeuralNetwork;
-        private NeuralNetwork NlNeuralNetwork;
-        private NeuralNetwork PorNeuralNetwork;
-        private NeuralNetwork SwitzNeuralNetwork;
-        private NeuralNetwork TurNeuralNetwork;
-        private NeuralNetwork DenNeuralNetwork;
-        private NeuralNetwork BelNeuralNetwork;
-        private NeuralNetwork AusNeuralNetwork;
-        private NeuralNetwork ScotlandNeuralNetwork;
-        private NeuralNetwork CzechNeuralNetwork;
-
+        
         protected const float MAX_KF = 11.1f;
         protected const float MIN_KF = 1.7f;
         protected const float RADIUS = 0.05f;
@@ -232,13 +224,15 @@ namespace ConsoleApplication1
             }
         }
 
-        public void CalculateBets(BookmakerMatchStatistic[] bookmakerMatchesEngland, Setup setupEn, BookmakerMatchStatistic[] bookmakerMatchesSpain, Setup setupSp, BookmakerMatchStatistic[] bookmakerMatchesItaly, Setup setupIt,
-            BookmakerMatchStatistic[] bookmakerMatchesFrance2, Setup setupFr2, BookmakerMatchStatistic[] bookmakerMatchesFrance1, Setup setupFr1, BookmakerMatchStatistic[] bookmakerMatchesGermany, Setup setupGer,
-            BookmakerMatchStatistic[] bookmakerMatchesIsrael, Setup setupIsr,  BookmakerMatchStatistic[] bookmakerMatchesNetherlands, Setup setupNl,
-            BookmakerMatchStatistic[] bookmakerMatchesPortugal, Setup setupPor, BookmakerMatchStatistic[] bookmakerMatchesSwitzeland, Setup setupSwitz,
-            BookmakerMatchStatistic[] bookmakerMatchesTurkey, Setup setupTur, BookmakerMatchStatistic[] bookmakerMatchesDenmark, Setup setupDen,
-            BookmakerMatchStatistic[] bookmakerMatchesBelgium, Setup setupBel, BookmakerMatchStatistic[] bookmakerMatchesAustria, Setup setupAus, BookmakerMatchStatistic[] bookmakerMatchesScotland, Setup setupScotland,
-            BookmakerMatchStatistic[] bookmakerMatchesCzech, Setup setupCzech, DateTime mathcesDate, float bank)
+        public void CalculateBets(BookmakerMatchStatistic[] bookmakerMatchesEngland, Setup setupEn, 
+                                  BookmakerMatchStatistic[] bookmakerMatchesSpain, Setup setupSp,
+                                  BookmakerMatchStatistic[] bookmakerMatchesItaly, Setup setupIt,
+                                  BookmakerMatchStatistic[] bookmakerMatchesFrance1, Setup setupFr1, 
+                                  BookmakerMatchStatistic[] bookmakerMatchesGermany, Setup setupGer,
+                                  BookmakerMatchStatistic[] bookmakerMatchesNetherlands, Setup setupNl,
+                                  BookmakerMatchStatistic[] bookmakerMatchesPortugal, Setup setupPor,
+                                  BookmakerMatchStatistic[] bookmakerMatchesTurkey, Setup setupTur,
+                                  DateTime mathcesDate, float bank)
         {
             var betsFile = new StreamWriter("d:/bets2.txt");
             InitializeNetworks();
@@ -247,19 +241,11 @@ namespace ConsoleApplication1
             betsValue += ProcessLeague(bookmakerMatchesEngland, EnNeuralNetwork, bets, mathcesDate, bank, "England", setupEn);
             betsValue += ProcessLeague(bookmakerMatchesSpain, SpNeuralNetwork, bets, mathcesDate, bank, "Spain", setupSp);
             betsValue += ProcessLeague(bookmakerMatchesItaly, ItNeuralNetwork, bets, mathcesDate, bank, "Italy", setupIt);
-            betsValue += ProcessLeague(bookmakerMatchesFrance2, Fr2NeuralNetwork, bets, mathcesDate, bank, "France2", setupFr2);
             betsValue += ProcessLeague(bookmakerMatchesFrance1, Fr1NeuralNetwork, bets, mathcesDate, bank, "France1", setupFr1);
             betsValue += ProcessLeague(bookmakerMatchesGermany, GerNeuralNetwork, bets, mathcesDate, bank, "Germany", setupGer);
-            betsValue += ProcessLeague(bookmakerMatchesIsrael, IsrNeuralNetwork, bets, mathcesDate, bank, "Israel", setupIsr);
             betsValue += ProcessLeague(bookmakerMatchesNetherlands, NlNeuralNetwork, bets, mathcesDate, bank, "Netherlands", setupNl);
             betsValue += ProcessLeague(bookmakerMatchesPortugal, PorNeuralNetwork, bets, mathcesDate, bank, "Portugal", setupPor);
-            betsValue += ProcessLeague(bookmakerMatchesSwitzeland, SwitzNeuralNetwork, bets, mathcesDate, bank, "Switzeland", setupSwitz);
             betsValue += ProcessLeague(bookmakerMatchesTurkey, TurNeuralNetwork, bets, mathcesDate, bank, "Turkey", setupTur);
-            betsValue += ProcessLeague(bookmakerMatchesDenmark, DenNeuralNetwork, bets, mathcesDate, bank, "Denmark", setupDen);
-            betsValue += ProcessLeague(bookmakerMatchesBelgium, BelNeuralNetwork, bets, mathcesDate, bank, "Belgium", setupBel);
-            betsValue += ProcessLeague(bookmakerMatchesAustria, AusNeuralNetwork, bets, mathcesDate, bank, "Austria", setupAus);
-            betsValue += ProcessLeague(bookmakerMatchesScotland, ScotlandNeuralNetwork, bets, mathcesDate, bank, "Scotland", setupScotland);
-            betsValue += ProcessLeague(bookmakerMatchesCzech, CzechNeuralNetwork, bets, mathcesDate, bank, "Czech", setupCzech);
             Console.WriteLine("bets: " + betsValue + "  % = " + betsValue / bank);
             var kf = 1f;
             if (betsValue > (bank * MAX_PERCENT))
@@ -327,69 +313,37 @@ namespace ConsoleApplication1
         {
             XmlSerializer xml = new XmlSerializer(typeof(NeuralNetwork));
 
-            using (var fStream = new FileStream("d:/En_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/En_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 EnNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Sp_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Sp_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 SpNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/It_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/It_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 ItNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Fr2_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                Fr2NeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Fr1_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Fr1_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 Fr1NeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Ger_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Ger_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 GerNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Isr_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                IsrNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Nl_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Nl_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 NlNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Por_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Por_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 PorNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
-            using (var fStream = new FileStream("d:/Switz_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                SwitzNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Tur_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var fStream = new FileStream("d:/Networks/SingleNetwork/Tur_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
             {
                 TurNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Den_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                DenNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Bel_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                BelNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Aus_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                AusNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            }
-            using (var fStream = new FileStream("d:/Scot_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                ScotlandNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
-            } 
-            using (var fStream = new FileStream("d:/Cz_networkNew.xml", FileMode.Open, FileAccess.Read, FileShare.None))
-            {
-                CzechNeuralNetwork = xml.Deserialize(fStream) as NeuralNetwork;
             }
         }
 

@@ -57,10 +57,10 @@ namespace ConsoleApplication1.SystemSetup
         {
             var list = new List<Setup>();
 
-            //list.Add(GetDefaultSetup());
-            //return list;
+            list.Add(GetDefaultSetup());
+            return list;
 
-            for (int daysPeriod = 30; daysPeriod <= 60; daysPeriod += 30)
+            for (int daysPeriod = 30; daysPeriod <= 90; daysPeriod += 30)
             {
                 for (int monthForLevel = 24; monthForLevel <= 48; monthForLevel += 12)
                 {
@@ -128,18 +128,18 @@ namespace ConsoleApplication1.SystemSetup
         private List<Setup> GetSetupsForNet(Setup baseSetup)
         {
             var setups = new List<Setup>();
-            var valueDelta = 0.02f;
-            var kfDelta = 1f;
+            var valueDelta = 0.01f;
+            var kfDelta = 0.25f;
             var lamdaDelta = 0.01f;
-            for (float minValue = 0.01f; minValue <= 0.05f; minValue += valueDelta)
+            for (float minValue = 0.01f; minValue <= 0.08f; minValue += valueDelta)
             {
-                for (float maxValue = minValue + valueDelta*2; maxValue <= 0.15f; maxValue += valueDelta)
+                for (float maxValue = minValue + valueDelta*2; maxValue <= 0.2f; maxValue += valueDelta)
                 {
-                    for (float minKf = 1f; minKf <= 4f; minKf += kfDelta)
+                    for (float minKf = 1f; minKf <= 3f; minKf += kfDelta)
                     {
-                        for (float maxKf = minKf + kfDelta; maxKf <= 5f; maxKf += kfDelta)
+                        for (float maxKf = minKf + kfDelta; maxKf <= 4f; maxKf += kfDelta)
                         {
-                            for (float lamda = 0.07f; lamda <= 0.15f; lamda += lamdaDelta)
+                            for (float lamda = 0.08f; lamda <= 0.12f; lamda += lamdaDelta)
                             {
                                 var newSetup = baseSetup.Clone();
                                 newSetup.minValue = minValue;
@@ -165,7 +165,7 @@ namespace ConsoleApplication1.SystemSetup
         private static Setup GetDefaultSetup()
         {
             var setup = new Setup();
-            setup.daysForFormPeriod = 30;
+            setup.daysForFormPeriod = 90;
             setup.monthForLevelPeriod = 24;
             setup.monthForH2H = 24;
             setup.minValue = 0.01f;
