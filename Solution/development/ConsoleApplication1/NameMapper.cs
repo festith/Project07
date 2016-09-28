@@ -244,6 +244,15 @@ namespace ConsoleApplication1
                case "Dusseldorf":
                    name = "Fortuna Dusseldorf";
                    break;
+               case "Leipzig":
+                   name = "RB Leipzig";
+                   break;
+               case "Mainz":
+                   name = "Mainz 05";
+                   break;
+               case "Schalke":
+                   name = "Schalke 04";
+                   break;
 
 
                //Italy
