@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfSetup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+
+
+for (int daysPeriod = 30; daysPeriod <= 90; daysPeriod += 30)
+            {
+                for (int monthForLevel = 24; monthForLevel <= 48; monthForLevel += 12)
+                {
+                    for (int monthForH2H = 24; monthForH2H <= 48; monthForH2H += 12)
+                    {
+					
+					
+					
+					
+ var valueDelta = 0.02f;
+            var kfDelta = 0.5f;
+            var lamdaDelta = 0.01f;
+            for (float minValue = 0.01f; minValue <= 0.03f; minValue += valueDelta)
+            {
+                for (float maxValue = 0.05f; maxValue <= 0.18f; maxValue += valueDelta)
+                {  
+                    for (float minKf = 1f; minKf <= 1f; minKf += kfDelta)
+                    {
+                        for (float maxKf = 4f; maxKf <= 5f; maxKf += kfDelta)
+                        {
+                            for (float lamda = 0.08f; lamda <= 0.19f; lamda += lamdaDelta)
+                            {

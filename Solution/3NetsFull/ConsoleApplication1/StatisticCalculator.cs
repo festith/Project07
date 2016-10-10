@@ -223,7 +223,7 @@ namespace ConsoleApplication1
             var macthCount = actualMatches.Count();
             if (macthCount < 3)
             {
-                return new[] { 0.5f};
+                return new[] { 0f};
             }
             return new[] { (draws - noDraws) / macthCount };
         }
