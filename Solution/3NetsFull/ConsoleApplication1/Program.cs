@@ -30,20 +30,21 @@ namespace ConsoleApplication1
             //    ReadWilliamHill("d:/currentBookmakerCzech.txt"), GetSetupCzech(), currentDate, currentBank);
 
 
-            var startDate = new DateTime(2011, 09, 1);
-            var data = bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}11-12.txt", countryName));
-            analiticSystem.InitializeOnDate(new DateTime(2006, 1, 1), startDate, SetupsProvider.GetSetupTest());
+            //var startDate = new DateTime(2011, 09, 1);
+            //var data = bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}11-12.txt", countryName));
+            //analiticSystem.InitializeOnDate(new DateTime(2006, 1, 1), startDate, SetupsProvider.GetSetupTest());
 
-            var res = analiticSystem.SimulateSeason(data, startDate, SetupsProvider.GetSetupTest(), true);
+            //var res = analiticSystem.SimulateSeason(data, startDate, SetupsProvider.GetSetupTest(), true);
 
-            //var bookmakerStatistic = new[] { bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}11-12.txt", countryName)),
-            //    bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}12-13.txt", countryName)),
-            //    bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}13-14.txt", countryName)), 
-            //    bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}14-15.txt", countryName)),
-            //    bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}15-16.txt", countryName)) };
+            var bookmakerStatistic = new[] { 
+                bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}11-12.txt", countryName)),
+                bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}12-13.txt", countryName)),
+                bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}13-14.txt", countryName)), 
+                bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}14-15.txt", countryName)),
+                bookmakerLineParser.ReadBookmakerLine(string.Format("d:/Bookmaker{0}15-16.txt", countryName)) };
 
-            //var setupScanner = new SetupsScanner(analiticSystem, 2004, 2011, bookmakerStatistic);
-            //setupScanner.StartScanning();
+            var setupScanner = new SetupsScanner(analiticSystem, 2004, 2011, bookmakerStatistic);
+            setupScanner.StartScanning();
 
             Console.ReadKey();
         }

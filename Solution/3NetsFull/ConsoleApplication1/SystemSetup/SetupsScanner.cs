@@ -10,7 +10,7 @@ namespace ConsoleApplication1.SystemSetup
 {
     public class SetupsScanner
     {
-        private const float MIN_SEASON_RESULT = 0.7f;
+        private const float MIN_SEASON_RESULT = 0.6f;
         private const int MIN_BETS_COUNT = 10;
 
         private int startStatisticYear;
@@ -60,11 +60,11 @@ namespace ConsoleApplication1.SystemSetup
             //list.Add(GetDefaultSetup());
             //return list;
 
-            for (int daysPeriod = 30; daysPeriod <= 30; daysPeriod += 30)
+            for (int daysPeriod = 30; daysPeriod <= 90; daysPeriod += 30)
             {
-                for (int monthForLevel = 36; monthForLevel <= 48; monthForLevel += 12)
+                for (int monthForLevel = 24; monthForLevel <= 48; monthForLevel += 12)
                 {
-                    for (int monthForH2H = 36; monthForH2H <= 48; monthForH2H += 12)
+                    for (int monthForH2H = 24; monthForH2H <= 48; monthForH2H += 12)
                     {
                         var setup = new Setup();
                         setup.daysForFormPeriod = daysPeriod;
@@ -131,15 +131,15 @@ namespace ConsoleApplication1.SystemSetup
             var valueDelta = 0.02f;
             var kfDelta = 1f;
             var lamdaDelta = 0.01f;
-            for (float minValue = 0.01f; minValue <= 0.03f; minValue += valueDelta)
+            for (float minValue = 0.01f; minValue <= 0.05f; minValue += valueDelta)
             {
-                for (float maxValue = 0.05f; maxValue <= 0.18f; maxValue += valueDelta)
+                for (float maxValue = 0.07f; maxValue <= 0.19f; maxValue += valueDelta)
                 {
-                    for (float minKf = 1f; minKf <= 1f; minKf += kfDelta)
+                    for (float minKf = 1f; minKf <= 2f; minKf += kfDelta)
                     {
-                        for (float maxKf = 4f; maxKf <= 5f; maxKf += kfDelta)
+                        for (float maxKf = 3f; maxKf <= 5f; maxKf += kfDelta)
                         {
-                            for (float lamda = 0.08f; lamda <= 0.12f; lamda += lamdaDelta)
+                            for (float lamda = 0.07f; lamda <= 0.2f; lamda += lamdaDelta)
                             {
                                 var newSetup = baseSetup.Clone();
                                 newSetup.minValue = minValue;
@@ -165,7 +165,7 @@ namespace ConsoleApplication1.SystemSetup
         private static Setup GetDefaultSetup()
         {
             var setup = new Setup();
-            setup.daysForFormPeriod = 30;
+            setup.daysForFormPeriod = 90;
             setup.monthForLevelPeriod = 48;
             setup.monthForH2H = 36;
 

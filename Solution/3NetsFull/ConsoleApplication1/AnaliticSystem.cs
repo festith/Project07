@@ -46,8 +46,8 @@ namespace ConsoleApplication1
         public AnaliticSystem()
         {
             neuralNetworkW1 = new NeuralNetwork(2);
-            neuralNetworkW2 = new NeuralNetwork(2);
-            neuralNetworkX = new NeuralNetwork(2);
+           // neuralNetworkW2 = new NeuralNetwork(2);
+           // neuralNetworkX = new NeuralNetwork(2);
             statistic = new Statistic();
             statisticCalculator = new StatisticCalculator(statistic.Matches);
         }
@@ -61,16 +61,18 @@ namespace ConsoleApplication1
 
         public float[] GetMatchResultprobability(string homeTeamName, string visitTeamName, DateTime matchDate, Setup setup)
         {
-           // var values = statisticCalculator.GetMatchStatisticW1(homeTeamName, visitTeamName, matchDate, setupW1);
-          //  var values = statisticCalculator.GetMatchStatisticW2(homeTeamName, visitTeamName, matchDate, setupW2);
-            var values = statisticCalculator.GetMatchStatisticX(homeTeamName, visitTeamName, matchDate, setup);
+            var values = statisticCalculator.GetMatchStatisticW1(homeTeamName, visitTeamName, matchDate, setup);
+           // var values = statisticCalculator.GetMatchStatisticW2(homeTeamName, visitTeamName, matchDate, setup);
+           // var values = statisticCalculator.GetMatchStatisticX(homeTeamName, visitTeamName, matchDate, setup);
             if (values == null)
             {
                 return new[] { 0f };
             }
 
             var signal = new Signal(values);
-            var result = neuralNetworkX.ProcessSignal(signal, setup.lampda);
+           // var result = neuralNetworkX.ProcessSignal(signal, setup.lampda);
+            var result = neuralNetworkW1.ProcessSignal(signal, setup.lampda);
+          //  var result = neuralNetworkW2.ProcessSignal(signal, setup.lampda);
 
             //var signalW2 = new Signal(statisticCalculator.GetMatchStatisticW2(homeTeamName, visitTeamName, matchDate, setupW2));
             //var resultW2 = neuralNetworkW2.ProcessSignal(signalW2, setupW2.lampda);
@@ -125,9 +127,9 @@ namespace ConsoleApplication1
 
                     var propability = GetMatchResultprobability(matches[i].HomeTeameName, matches[i].AwayTeamName, matches[i].Data, setup);
 
-                    float bet1 = 0f;//GetBetValue(bMatch.homeKf, propability[0], setupW1) * bank;
-                    float betX = GetBetValue(bMatch.drawKf, propability[0], setup) * bank;
-                    float bet2 = 0f;//GetBetValue(bMatch.visitKf, propability[0], setup) * bank;
+                    float bet1 = GetBetValue(bMatch.homeKf, propability[0], setup) * bank;
+                    float betX = 0f; // GetBetValue(bMatch.drawKf, propability[0], setup) * bank;
+                    float bet2 = 0f; // GetBetValue(bMatch.visitKf, propability[0], setup) * bank;
 
 
                     if (bet1 > 0 || bet2 > 0 || betX > 0)
@@ -217,9 +219,9 @@ namespace ConsoleApplication1
             //return;
 
 
-            //neuralNetworkW1.ResetNetwork();
-           // neuralNetworkW2.ResetNetwork();
-            neuralNetworkX.ResetNetwork();
+            neuralNetworkW1.ResetNetwork();
+            //neuralNetworkW2.ResetNetwork();
+            //neuralNetworkX.ResetNetwork();
 
             var lastData = new DateTime(finishDate.Year, 07, 01);
 
@@ -227,13 +229,13 @@ namespace ConsoleApplication1
             {
                 if (match.Data < lastData && match.Data > startDate && (match.Data.Month > 8 || match.Data.Month < 6))
                 {
-                    //var values = statisticCalculator.GetMatchStatisticW1(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
+                    var values = statisticCalculator.GetMatchStatisticW1(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
 
-                    //if (values != null)
-                    //{
-                    //    var signal = new Signal(values);
-                    //    neuralNetworkW1.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 0 ? 0 : 1);
-                    //}
+                    if (values != null)
+                    {
+                        var signal = new Signal(values);
+                        neuralNetworkW1.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 0 ? 0 : 1);
+                    }
 
                     //var values = statisticCalculator.GetMatchStatisticW2(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
 
@@ -243,13 +245,13 @@ namespace ConsoleApplication1
                     //    neuralNetworkW2.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 2 ? 0 : 1);
                     //}
 
-                    var values = statisticCalculator.GetMatchStatisticX(match.HomeTeameName, match.AwayTeamName,match.Data, setup);
+                    //var values = statisticCalculator.GetMatchStatisticX(match.HomeTeameName, match.AwayTeamName,match.Data, setup);
 
-                    if (values != null)
-                    {
-                        var signal = new Signal(values);
-                        neuralNetworkX.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 1 ? 0 : 1);
-                    }
+                    //if (values != null)
+                    //{
+                    //    var signal = new Signal(values);
+                    //    neuralNetworkX.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 1 ? 0 : 1);
+                    //}
                 }
             }
 
@@ -269,16 +271,16 @@ namespace ConsoleApplication1
             var actualMatches = statistic.Matches.Where(match => match.Data < lastData && match.Data > startDate);
             foreach (var match in actualMatches)
             {
-                if (match.Data.Month > 9 || match.Data.Month < 6)
+                if (match.Data.Month > 8 || match.Data.Month < 6)
                 {
-                    //var values = statisticCalculator.GetMatchStatisticW1(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
+                    var values = statisticCalculator.GetMatchStatisticW1(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
 
-                    //if (values != null)
-                    //{
-                    //    var signal = new Signal(values);
-                    //    neuralNetworkW1.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 0 ? 0 : 1);
-                    //}
-                    
+                    if (values != null)
+                    {
+                        var signal = new Signal(values);
+                        neuralNetworkW1.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 0 ? 0 : 1);
+                    }
+
                     //var values = statisticCalculator.GetMatchStatisticW2(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
 
                     //if (values != null)
@@ -287,13 +289,13 @@ namespace ConsoleApplication1
                     //    neuralNetworkW2.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 2 ? 0 : 1);
                     //}
 
-                    var values = statisticCalculator.GetMatchStatisticX(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
+                    //var values = statisticCalculator.GetMatchStatisticX(match.HomeTeameName, match.AwayTeamName, match.Data, setup);
 
-                    if (values != null)
-                    {
-                        var signal = new Signal(values);
-                        neuralNetworkX.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 1 ? 0 : 1);
-                    }
+                    //if (values != null)
+                    //{
+                    //    var signal = new Signal(values);
+                    //    neuralNetworkX.AddSample(signal, (int)match.GetResultByTeamName(match.HomeTeameName) == 1 ? 0 : 1);
+                    //}
 
                 }
             }
