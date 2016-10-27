@@ -275,13 +275,13 @@ namespace ConsoleApplication1
           {
               var setup = new Setup();
               setup.daysForFormPeriod = 60;
-              setup.monthForLevelPeriod = 36;
-              setup.monthForH2H = 36;
-              setup.minValue = 0.01f;
-              setup.maxValue = 0.17f;
+              setup.monthForLevelPeriod = 24;
+              setup.monthForH2H = 48;
+              setup.minValue = 0.03f;
+              setup.maxValue = 0.16f;
               setup.minKf = 1f;
-              setup.maxKf = 4f;
-              setup.lampda = 0.09f;
+              setup.maxKf = 5f;
+              setup.lampda = 0.05f;
               setup.kf = 1f;
               return setup;
           }
@@ -293,8 +293,8 @@ namespace ConsoleApplication1
               setup.daysForFormPeriod = 90;
               setup.monthForLevelPeriod = 36;
               setup.monthForH2H = 36;
-              setup.minValue = 0.01f;
-              setup.maxValue = 0.08f;
+              setup.minValue = 0f;
+              setup.maxValue = 0.11f;
               setup.minKf = 1f;
               setup.maxKf = 4f;
               setup.lampda = 0.07f;
@@ -307,13 +307,13 @@ namespace ConsoleApplication1
           {
               var setup = new Setup();
               setup.daysForFormPeriod = 60;
-              setup.monthForLevelPeriod = 36;
+              setup.monthForLevelPeriod = 48;
               setup.monthForH2H = 24;
-              setup.minValue = 0.02f;
+              setup.minValue = 0.01f;
               setup.maxValue = 0.19f;
-              setup.minKf = 3f;
-              setup.maxKf = 4.5f;
-              setup.lampda = 0.18f;
+              setup.minKf = 1f;
+              setup.maxKf = 4f;
+              setup.lampda = 0.19f;
               setup.kf = 1f;
               return setup;
           }
@@ -325,8 +325,8 @@ namespace ConsoleApplication1
               setup.daysForFormPeriod = 60;
               setup.monthForLevelPeriod = 24;
               setup.monthForH2H = 24;
-              setup.minValue = 0.03f;
-              setup.maxValue = 0.17f;
+              setup.minValue = 0.05f;
+              setup.maxValue = 0.19f;
               setup.minKf = 1f;
               setup.maxKf = 4f;
               setup.lampda = 0.08f;
@@ -338,14 +338,30 @@ namespace ConsoleApplication1
           public static Setup GetSetupEnX()
           {
               var setup = new Setup();
-              setup.daysForFormPeriod = 60;
-              setup.monthForLevelPeriod = 24;
-              setup.monthForH2H = 36;
-              setup.minValue = 0.01f;
-              setup.maxValue = 0.05f;
+              setup.daysForFormPeriod = 30;
+              setup.monthForLevelPeriod = 36;
+              setup.monthForH2H = 24;
+              setup.minValue = 0.05f;
+              setup.maxValue = 0.13f;
               setup.minKf = 1f;
               setup.maxKf = 4f;
               setup.lampda = 0.08f;
+              setup.kf = 1f;
+              return setup;
+          }
+
+          //Por
+          public static Setup GetSetupPorX()
+          {
+              var setup = new Setup();
+              setup.daysForFormPeriod = 60;
+              setup.monthForLevelPeriod = 24;
+              setup.monthForH2H = 24;
+              setup.minValue = 0.01f;
+              setup.maxValue = 0.13f;
+              setup.minKf = 1f;
+              setup.maxKf = 4f;
+              setup.lampda = 0.09f;
               setup.kf = 1f;
               return setup;
           }
