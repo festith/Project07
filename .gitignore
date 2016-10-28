@@ -1,0 +1,16 @@
+Solution/3NetsFull/_ReSharper.ConsoleApplication1/
+Solution/development/_ReSharper.ConstBetSolution/
+*.dat
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.bin
+*.crc
+*.version
