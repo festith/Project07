@@ -48,6 +48,7 @@
     <Compile Include="BookmakerParsers\ParimatchHistoryParser.cs" />
     <Compile Include="BookmakerParsers\ParimatchNewLineParser.cs" />
     <Compile Include="BookmakerParsers\WilliamHillNewLineParser.cs" />
+    <Compile Include="LeagueProcesser.cs" />
     <Compile Include="NameMapper.cs" />
     <Compile Include="SetupsProvider.cs" />
     <Compile Include="StatisticCalculator.cs" />
