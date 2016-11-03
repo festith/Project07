@@ -1,8 +1,8 @@
-England		|9
-Spain		|9
-Italy		|10   27.10.16	Palermo - Udinese	— —
-France1		|10
-Germany		|8
-Netherlands	|10
-Portugal	|8
-Turkey		|8
+England		|10
+Spain		|10
+Italy		|11
+France1		|11
+Germany		|9
+Netherlands	|11
+Portugal	|9
+Turkey		|9

@@ -18,13 +18,13 @@ namespace ConsoleApplication1
 
             //  analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
-            var currentDate = new DateTime(2016, 10, 29);
-            var currentBank = 6f;
+            var currentDate = new DateTime(2016, 11, 04);
+            var currentBank = 9.31f;
 
             analiticSystem.CalculateBets(GetLeagueProcessers(), currentDate, currentBank);
             
-            var bookmakerLineParser = new ParimatchHistoryParser();
-            var countryName = "Italy";
+            //var bookmakerLineParser = new ParimatchHistoryParser();
+            //var countryName = "Italy";
 
 
             //var startDate = new DateTime(2011, 09, 1);
