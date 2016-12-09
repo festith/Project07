@@ -52,3 +52,9 @@ D:\Projects\Analitycs\development\ConsoleApplication1\bin\Debug\ConsoleApplicati
 D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 D:\Projects\Analitycs\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Projects\Project07\Solution\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Projects\Project07\Solution\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Projects\Project07\Solution\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Projects\Project07\Solution\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Projects\Project07\Solution\development\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Projects\Project07\Solution\development\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
