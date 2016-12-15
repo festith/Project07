@@ -19,8 +19,8 @@ namespace ConsoleApplication1
             //analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
             var williamhillParser = new WilliamHillNewLineParser();
-            var currentDate = new DateTime(2016, 12, 11);
-            var currentBank = 2.22f;
+            var currentDate = new DateTime(2016, 12, 19);
+            var currentBank = 2.01f;
             analiticSystem.CalculateBets(
                 williamhillParser.ReadBookmakerLine("d:/currentBookmakerEngland.txt"), SetupsProvider.GetSetupEn(),
                 williamhillParser.ReadBookmakerLine("d:/currentBookmakerSpain.txt"), SetupsProvider.GetSetupSp(),
