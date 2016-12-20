@@ -1,8 +1,8 @@
-England		|16
-Spain		|15
-Italy		|16
-France1		|17
-Germany		|14
-Netherlands	|16
-Portugal	|13
-Turkey		|14
+England		|17
+Spain		|16
+Italy		|17
+France1		|18
+Germany		|15
+Netherlands	|17
+Portugal	|14 + 15.12.16	Porto - Maritimo Madeira
+Turkey		|15
