@@ -1,8 +1,8 @@
-England		|22
-Spain		|19
-Italy		|21
-France1		|21
-Germany		|17
-Netherlands	|19
-Portugal	|18
-Turkey		|18
+England		|23
+Spain		|20
+Italy		|22
+France1		|22
+Germany		|18
+Netherlands	|20
+Portugal	|19
+Turkey		|19
