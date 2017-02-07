@@ -1,7 +1,7 @@
 England		|23
 Spain		|20
-Italy		|22
-France1		|22
+Italy		|23 - 07.02.17	Roma - Fiorentina  08.02.17	Bologna - Milan 08.02.17	Crotone - Juventus	— —
+France1		|23
 Germany		|18
 Netherlands	|20
 Portugal	|19
