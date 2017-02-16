@@ -15,11 +15,11 @@ namespace ConsoleApplication1
         {
             var analiticSystem = new AnaliticSystem();
                      
-           // analiticSystem.AddNewMatches("d:/NewMatches.txt");
+            //analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
             var williamhillParser = new WilliamHillNewLineParser();
-            var currentDate = new DateTime(2017, 02, 12);
-            var currentBank = 1.4f;
+            var currentDate = new DateTime(2017, 02, 19);
+            var currentBank = 0.59f;
             analiticSystem.CalculateBets(
                 williamhillParser.ReadBookmakerLine("d:/currentBookmakerEngland.txt"), SetupsProvider.GetSetupEn(),
                 williamhillParser.ReadBookmakerLine("d:/currentBookmakerSpain.txt"), SetupsProvider.GetSetupSp(),
