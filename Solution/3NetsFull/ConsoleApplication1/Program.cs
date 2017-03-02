@@ -18,8 +18,8 @@ namespace ConsoleApplication1
 
             //  analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
-            var currentDate = new DateTime(2017, 02, 25);
-            var currentBank = 2.41f;
+            var currentDate = new DateTime(2017, 03, 05);
+            var currentBank = 1.78f;
 
             analiticSystem.CalculateBets(GetLeagueProcessers(), currentDate, currentBank);
             
