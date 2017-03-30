@@ -16,10 +16,10 @@ namespace ConsoleApplication1
         {
             var analiticSystem = new AnaliticSystem();
 
-            //  analiticSystem.AddNewMatches("d:/NewMatches.txt");
+           // analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
-            var currentDate = new DateTime(2017, 03, 12);
-            var currentBank = 1.81f;
+            var currentDate = new DateTime(2017, 04, 2);
+            var currentBank = 2.04f;
 
             analiticSystem.CalculateBets(GetLeagueProcessers(), currentDate, currentBank);
             

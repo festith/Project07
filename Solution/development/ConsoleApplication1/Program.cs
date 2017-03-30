@@ -15,21 +15,21 @@ namespace ConsoleApplication1
         {
             var analiticSystem = new AnaliticSystem();
                      
-            //analiticSystem.AddNewMatches("d:/NewMatches.txt");
+            analiticSystem.AddNewMatches("d:/NewMatches.txt");
 
-            var williamhillParser = new WilliamHillNewLineParser();
-            var currentDate = new DateTime(2017, 03, 12);
-            var currentBank = 0.95f;
-            analiticSystem.CalculateBets(
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerEngland.txt"), SetupsProvider.GetSetupEn(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerSpain.txt"), SetupsProvider.GetSetupSp(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerItaly.txt"), SetupsProvider.GetSetupIt(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerFrance1.txt"), SetupsProvider.GetSetupFr1(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerGermany.txt"), SetupsProvider.GetSetupGer(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerNetherlands.txt"), SetupsProvider.GetSetupNl(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerPortugal.txt"), SetupsProvider.GetSetupPor(),
-                williamhillParser.ReadBookmakerLine("d:/currentBookmakerTurkey.txt"), SetupsProvider.GetSetupTur(),
-                currentDate, currentBank);
+            //var williamhillParser = new WilliamHillNewLineParser();
+            //var currentDate = new DateTime(2017, 03, 12);
+            //var currentBank = 0.95f;
+            //analiticSystem.CalculateBets(
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerEngland.txt"), SetupsProvider.GetSetupEn(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerSpain.txt"), SetupsProvider.GetSetupSp(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerItaly.txt"), SetupsProvider.GetSetupIt(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerFrance1.txt"), SetupsProvider.GetSetupFr1(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerGermany.txt"), SetupsProvider.GetSetupGer(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerNetherlands.txt"), SetupsProvider.GetSetupNl(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerPortugal.txt"), SetupsProvider.GetSetupPor(),
+            //    williamhillParser.ReadBookmakerLine("d:/currentBookmakerTurkey.txt"), SetupsProvider.GetSetupTur(),
+            //    currentDate, currentBank);
 
 
             

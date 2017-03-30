@@ -125,6 +125,9 @@ namespace ConsoleApplication1
                 case "At. Madrid":
                     name = "Atletico Madrid";
                     break;
+                case "Atlético Madrid":
+                    name = "Atletico Madrid";
+                    break;                    
                 case "Gijon":
                     name = "Sporting Gijon";
                     break;
