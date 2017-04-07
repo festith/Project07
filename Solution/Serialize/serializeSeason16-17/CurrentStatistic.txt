@@ -1,8 +1,8 @@
-England		|30
-Spain		|29
+England		|31
+Spain		|30
 Italy		|30
 France1		|31
-Germany		|26
-Netherlands	|28
+Germany		|27
+Netherlands	|29
 Portugal	|27
 Turkey		|26
